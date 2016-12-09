@@ -41,6 +41,17 @@ public class ArbitrageOpportunityFinder {
 					opportunity.setBuyListing(bestBuyOffer);
 					opportunity.setSellListing(bestSellOffer);
 					allOpportunities.add(opportunity);
+				} else if (bestBuyOffer != null) {
+					String currency = CurrencyTypeHelper.getCurrencyNameFromIdentifier(i);
+					System.out.println("Nobody is currently selling " + currency + " for Chaos Orbs, but you can buy " + bestBuyOffer.getSellOffer() + " Chaos Orbs for " + bestBuyOffer.getBuyOffer() + " " + currency + ".");
+				} else if (bestSellOffer != null) {
+					// I'm certain this is wrongly phrased.  Need test data.
+					String currency = CurrencyTypeHelper.getCurrencyNameFromIdentifier(i);
+					System.out.println("Nobody is currently buying " + currency + ".  Best exising sell offer is " + bestSellOffer.getBuyOffer() + " " + currency + " for " + bestSellOffer.getSellOffer() + " Chaos Orbs.");
+				} else {
+					// both null.
+					System.out.println("Nobody buying or selling " + CurrencyTypeHelper.getCurrencyNameFromIdentifier(i));
+					
 				}
 			}
 		}
