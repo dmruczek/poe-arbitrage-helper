@@ -17,8 +17,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class CurrencyRateDataRetriever {
 	
-	private static final String CURRENCY_TRADE_URL_1 = "http://currency.poe.trade/search?league=Prophecy&online=x&want=4&have=";
-	private static final String CURRENCY_TRADE_URL_2 = "http://currency.poe.trade/search?league=Prophecy&online=x&want=&have=4";
+	private static final String LEAGUE = "Breach";
+	
+	
+	private static final String CURRENCY_TRADE_URL_1 = "http://currency.poe.trade/search?league=" + LEAGUE + "&online=x&want=4&have=";
+	private static final String CURRENCY_TRADE_URL_2 = "http://currency.poe.trade/search?league=" + LEAGUE + "&online=x&want=&have=4";
 	
 	private String retrievalScript;
 
