@@ -11,7 +11,9 @@ public class ArbitrageOpportunityFinder {
 
 		List<ArbitrageOpportunity> allOpportunities = new ArrayList<ArbitrageOpportunity>();
 		
-		for (int i = 1; i <= 39; i++) {
+		for (int i = 1; i <= CurrencyTypeHelper.getSizeOfCurrencyMap(); i++) {
+			
+			// Skip Chaos orbs, since they're the basis for comparison for all items.
 			if (i != 4) {
 
 				BigDecimal lowestBuyRatio = new BigDecimal("9999");

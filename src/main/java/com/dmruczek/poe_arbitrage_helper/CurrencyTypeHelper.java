@@ -48,6 +48,38 @@ public class CurrencyTypeHelper {
 		identifierToCurrencyNameMap.put(37, "Yriel's Key");
 		identifierToCurrencyNameMap.put(38, "Inya's Key");
 		identifierToCurrencyNameMap.put(39, "Volkuur's Key");
+		identifierToCurrencyNameMap.put(40, "Offering to the Goddess");
+		identifierToCurrencyNameMap.put(41, "Fragment of the Hydra");
+		identifierToCurrencyNameMap.put(42, "Fragment of the Phoenix");
+		identifierToCurrencyNameMap.put(43, "Fragment of the Minotaur");
+		identifierToCurrencyNameMap.put(44, "Fragment of the Chimera");
+		identifierToCurrencyNameMap.put(45, "Apprentice Cartographer's Sextant");
+		identifierToCurrencyNameMap.put(46, "Journeyman Cartographer's Sextant");
+		identifierToCurrencyNameMap.put(47, "Master Cartographer's Sextant");
+		identifierToCurrencyNameMap.put(48, "Sacrifice Set");
+		identifierToCurrencyNameMap.put(49, "Mortal Set");
+		identifierToCurrencyNameMap.put(50, "Pale Court Set");
+		identifierToCurrencyNameMap.put(51, "Shaper Set");
+		identifierToCurrencyNameMap.put(52, "Splinter of Xoph");
+		identifierToCurrencyNameMap.put(53, "Splinter of Tul");
+		identifierToCurrencyNameMap.put(54, "Splinter of Esh");
+		identifierToCurrencyNameMap.put(55, "Splinter of Uul-Netol");
+		identifierToCurrencyNameMap.put(56, "Splinter of Chayula");
+		identifierToCurrencyNameMap.put(57, "Blessing of Xoph");
+		identifierToCurrencyNameMap.put(58, "Blessing of Tul");
+		identifierToCurrencyNameMap.put(59, "Blessing of Esh");
+		identifierToCurrencyNameMap.put(60, "Blessing of Uul-Netol");
+		identifierToCurrencyNameMap.put(61, "Blessing of Chayula");
+		identifierToCurrencyNameMap.put(62, "Xoph's Breachstone");
+		identifierToCurrencyNameMap.put(63, "Tul's Breachstone");
+		identifierToCurrencyNameMap.put(64, "Esh's Breachstone");
+		identifierToCurrencyNameMap.put(65, "Uul-Netol's Breachstone");
+		identifierToCurrencyNameMap.put(66, "Chayula's Breachstone");
+		
+	}
+	
+	public static int getSizeOfCurrencyMap() {
+		return identifierToCurrencyNameMap.size();
 	}
 	
 	public static String getCurrencyNameFromIdentifier(int identifier) {
