@@ -2,10 +2,6 @@ package com.dmruczek.poe_arbitrage_helper;
 
 import java.util.List;
 
-/**
- * Hello world!
- *
- */
 public class App {
 	
 	protected static CurrencyRateDataRetriever currencyRateDataRetriever = new CurrencyRateDataRetriever();
