@@ -54,7 +54,7 @@ public class ArbitrageOpportunity implements Comparable<ArbitrageOpportunity> {
 		sb.append(" Chaos Orbs.");
 		sb.append("\nThis will get you around ");
 		sb.append(calculateOpportunityValue());
-		sb.append(" Chaos Orbs worth of currency per transaction.\n\n");
+		sb.append(" Chaos Orbs worth of return per Chaos Orb risked.\n\n");
 
 		return sb.toString();
 	}
