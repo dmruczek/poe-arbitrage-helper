@@ -11,9 +11,12 @@ import java.util.Map;
 
 import org.apache.commons.io.Charsets;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CurrencyRateDataRetriever {
 	
@@ -52,9 +55,19 @@ public class CurrencyRateDataRetriever {
 		return wantChaos;
 	}
 	
+	protected void openPage(WebDriver driver, String url) {
+		driver.get(url);
+		
+		new WebDriverWait(driver, 10).until(new ExpectedCondition<Boolean>() {
+			public Boolean apply(WebDriver driver) {
+				return driver.findElement(By.cssSelector("div#main")).isDisplayed();
+			}
+		});
+	}
+	
 	public List<CurrencyTradeListing> retrieveCurrencyRatesFromUrl(WebDriver driver, String url) {
 
-		driver.get(url);
+		openPage(driver, url);
 		
 		@SuppressWarnings("unchecked")
 		List<Map<String,String>> data = (List<Map<String,String>>) ((JavascriptExecutor)driver).executeScript(retrievalScript);
